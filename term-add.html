@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MIPTish</title>
+    <link rel="stylesheet" href="mystyle.css" />
+    <style>
+      .container {
+        overflow: hidden;
+      }
+      .tab {
+        float: left;
+      }
+      .tab-2 {
+        margin-left: 50px;
+      }
+      .tab-2 input {
+        display: block;
+        margin-bottom: 10px;
+      }
+      tr {
+        transition: all 0.25s ease-in-out;
+      }
+      tr:hover {
+        background-color: rgb(103, 108, 108);
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Here you can add some new words in vocabulary list.</h1>
+      <div class="tab tab-1">
+        <table id="table" border="1">
+          <tr>
+            <th scope="col" class="py-3">Name</th>
+            <th scope="col" class="py-3">Word</th>
+            <th scope="col" class="py-3">Definition</th>
+          </tr>
+          <tr>
+            <td class="py-3">MIPTish</td>
+            <td class="py-3">学校</td>
+            <td class="py-3">School</td>
+          </tr>
+        </table>
+      </div>
+      <div class="tab tab-2">
+        Name :<input type="text" name="fname" id="fname" placeholder="Ivanov" />
+        Word :<input type="text" name="word" id="word" placeholder="教室" />
+        Definition :<input
+          type="text"
+          name="definition"
+          id="definition"
+          placeholder="Classroom"
+        />
+
+        <button onclick="addHtmlTableRow();">Add</button>
+        <button onclick="editHtmlTableSelectedRow();">Edit</button>
+        <button onclick="removeSelectedRow();">Remove</button>
+      </div>
+    </div>
+    <script src="add.js"></script>
+  </body>
+</html>
