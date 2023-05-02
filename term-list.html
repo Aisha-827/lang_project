@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Карточки для запоминания</title>
+    <title>MIPTish</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
@@ -57,7 +57,19 @@
         width: 60%;
         margin: auto;
       }
+      td {
+        border: 2px;
+      }
     </style>
+    <!-- <script>
+      CsvToHtmlTable.init({
+        csv_path: "data/terms.csv",
+        element: "table-container",
+        allow_download: true,
+        csv_options: { separator: ",", delimiter: '"' },
+        datatables_options: { paging: false },
+      });
+    </script> -->
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -93,8 +105,11 @@
         </div>
       </div>
     </nav>
+
     <div class="container px-4 py-5" id="terms-table">
       <div class="table-responsive">
+        <!--<input type="file" />-->
+        <script src="csv.js"></script>
         <table class="table table-striped table-sm">
           <thead>
             <tr>
@@ -105,9 +120,29 @@
           </thead>
           <tbody>
             <tr>
-              <td class="py-3">{{ cnt }}</td>
-              <td class="py-3">{{ term }}</td>
-              <td class="py-3">{{ definition }}</td>
+              <td class="py-3">1</td>
+              <td class="py-3">学校</td>
+              <td class="py-3">School</td>
+            </tr>
+            <tr>
+              <td class="py-3">2</td>
+              <td class="py-3">教室</td>
+              <td class="py-3">Classroom</td>
+            </tr>
+            <tr>
+              <td class="py-3">3</td>
+              <td class="py-3">学生</td>
+              <td class="py-3">Student</td>
+            </tr>
+            <tr>
+              <td class="py-3">4</td>
+              <td class="py-3">老师</td>
+              <td class="py-3">Teacher</td>
+            </tr>
+            <tr>
+              <td class="py-3">5</td>
+              <td class="py-3">课本</td>
+              <td class="py-3">Textbook</td>
             </tr>
           </tbody>
         </table>
